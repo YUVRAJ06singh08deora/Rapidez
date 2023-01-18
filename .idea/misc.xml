@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/location.xml" value="0.1" />
         <entry key="app/src/main/res/font/fredoka_one.xml" value="0.31203703703703706" />
         <entry key="app/src/main/res/layout/activity_driverss_performance.xml" value="0.2427536231884058" />
         <entry key="app/src/main/res/layout/activity_lastlocation.xml" value="0.1897644927536232" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/activity_showaccl_data.xml" value="0.1998016357421875" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2390625" />
       </map>
     </option>
   </component>
