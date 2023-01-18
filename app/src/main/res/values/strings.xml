@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Rapidez</string>
+    <string name="title_activity_lastlocation">LastlocationActivity</string>
 </resources>

@@ -6,43 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".Driver_performanceActivity"
+    tools:context=".Driverss_performanceActivity"
     tools:openDrawer="start">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#6C3CC1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:titleTextColor="#FFFF" />
-        <TextView
-            android:id="@+id/head1"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="31dp"
-            android:backgroundTint="#FDDE82"
-            android:fontFamily="@font/fredoka_one"
-            android:padding="10dp"
-            android:paddingTop="20dp"
-            android:text="Rapidez"
-            android:textColor="#FFFF"
-            android:textColorHint="#FFFFFF"
-            android:textSize="28sp"
-            />
 
         <TextView
             android:id="@+id/speed1"
-            android:layout_width="300dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="31dp"
+            android:layout_width="372dp"
+            android:layout_height="55dp"
             android:backgroundTint="#FDDE82"
             android:fontFamily="@font/fredoka_one"
             android:padding="10dp"
@@ -51,7 +26,7 @@
             android:textColor="#FFFF"
             android:textColorHint="#FFFFFF"
             android:textSize="28sp"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/NewList"
