@@ -36,12 +36,21 @@ int16_t AccelX, AccelY, AccelZ, Temperature, GyroX, GyroY, GyroZ;
 float vx, vy, vz;   // velocity in the x and y directions
 float prev_ax, prev_ay, prev_az;
 float dax, day, daz, da;
-float v;        // total velocity
-float dt = 0.3; // time step between two consecutive acceleration readings
-float AbsAccel;
+float AbsAccel; 
+float v, angularVel;        // total velocity
+float dt = 0.1; // time step between two consecutive acceleration readings
+
+
+//code of history
+int score, harshBreak;
+int historyCount = 100;
+float angularVelocityHistory[100];
+int historyIndex = 0;
 
 
 void setup() {
+  score = 0;
+  harshBreak = 0;
   Serial.println("Serial communication started\n\n");
   Serial1.begin(115200);
   //Wire.begin(D1, D2);  
@@ -92,10 +101,33 @@ void loop() {
   float daz = abs(Az - prev_az);
   float da = sqrt(dax*dax + day*day + daz*daz);
 
+  //Code to calculate angular Acc
+  angularVel = sqrt(pow(Gx, 2) + pow(Gy, 2) + pow(Gz, 2));
+  
+  angularVelocityHistory[historyIndex] = angularVel;
+  historyIndex = (historyIndex + 1) % historyCount;
+
+  if (angularVel > 20) {
+    float averageVelocity = 0;
+    for (int i = 0; i < historyCount; i++) {
+        averageVelocity += angularVelocityHistory[i];
+    }
+    averageVelocity /= historyCount;
+
+    // increment the score using a logarithmic function of the angular velocity
+    score += log2(angularVel - averageVelocity + 1);
+    harshBreak += 1;
+    Serial.print("Crash detected! Score: ");
+    Serial.print(score);
+    Serial1.println(score);
+  } else {
+    Serial.println("No crash detected.");
+  }
+
+
   //Code to calculate absolute accelration
-  AbsAccel = sqrt(Ax*Ax + Ay*Ay + Az*Az);
-  float threshold = 0.1;
-  if(da>threshold){
+  AbsAccel = sqrt(Ax*Ax + Ay*Ay);
+  if(da>0.057){
 
     
     //Code to calculate velocity
@@ -111,8 +143,8 @@ void loop() {
 
  
 
-  v = sqrt(vx*vx + vy*vy + vz*vz);
-    
+  v = 10*sqrt(vx*vx + vy*vy + vz*vz);
+  float angularVel;  
   
   if (Firebase.setDouble(firebaseData, "/V", v)) {    // On successful Write operation, function returns 1  
                Serial.println("Value Uploaded Successfully");
@@ -129,6 +161,27 @@ else {
                Serial.println("Value Uploaded Successfully");
                Serial.print("Accelration = ");
                Serial.println(AbsAccel);
+               Serial.println("\n");
+     }
+
+else {        
+    Serial.println(firebaseData.errorReason());
+  }
+ if (Firebase.setDouble(firebaseData, "/S", 100 - score)) {    // On successful Write operation, function returns 1  
+               Serial.println("Value Uploaded Successfully");
+               Serial.print("Score = ");
+               Serial.println(score);
+               Serial.println("\n");
+     }
+
+else {        
+    Serial.println(firebaseData.errorReason());
+  }
+
+  if (Firebase.setDouble(firebaseData, "/hb", harshBreak)) {    // On successful Write operation, function returns 1  
+               Serial.println("Value Uploaded Successfully");
+               Serial.print("Score = ");
+               Serial.println(score);
                Serial.println("\n");
      }
 
@@ -152,6 +205,8 @@ else {
   Serial1.print(ardSend); 
    //Wire.write(ardSend);
    //Wire.endTransmission();
+
+   
 }
 
 void I2C_Write(uint8_t deviceAddress, uint8_t regAddress, uint8_t data){
