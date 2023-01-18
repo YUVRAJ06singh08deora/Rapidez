@@ -3,6 +3,16 @@
 
 [Click on this Link to Open the Presentation](https://drive.google.com/file/d/1Sl19DC2BrUWdEyKwef59T7hpOCNrsB7t/view?usp=share_link)
 
+### Application Screenshots
+
+<img width="166" alt="image" src="https://user-images.githubusercontent.com/76677032/213193138-d6529d64-2cb8-414a-8e0a-63ed86e1a54a.png">
+<img width="162" alt="image" src="https://user-images.githubusercontent.com/76677032/213192998-ac2d5326-4955-4437-b731-de37c8a2abba.png">
+<img width="164" alt="image" src="https://user-images.githubusercontent.com/76677032/213192589-1bd2b339-3c36-497e-bd71-90bc865fd4ee.png">
+<img width="164" alt="image" src="https://user-images.githubusercontent.com/76677032/213192823-9aa8e694-3e44-4f89-97b1-3fd6fc7b1948.png">
+
+
+
+
 ### Introduction:
 Rapidez is an IoT (Internet of Things) based mobile application that alerts users of excessive speed limits while they are driving. The app uses GPS technology and sensor data from connected devices to determine the speed of the vehicle and alert the driver if they exceed the legal speed limit.
 
