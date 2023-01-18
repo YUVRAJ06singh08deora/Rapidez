@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15191f"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="236dp"
+        android:src="@drawable/rapidez"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rapidez"
+        android:textSize="45sp"
+        android:fontFamily="@font/nmu"
+        android:textColor="#049ad1"/>
+
+</LinearLayout>
