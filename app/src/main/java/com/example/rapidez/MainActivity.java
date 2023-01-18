@@ -17,7 +17,7 @@ private TextView clickbtn;
         clickbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(), Showaccl_data.class);
+                Intent intent=new Intent(getApplicationContext(), Driverss_performanceActivity.class);
                 startActivity(intent);
             }
         });
