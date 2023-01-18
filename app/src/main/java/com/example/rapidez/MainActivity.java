@@ -50,7 +50,7 @@ LinearLayout lastLocation,performance,history;
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),LastlocationActivity.class);
+                Intent intent=new Intent(getApplicationContext(),HistoryActivity.class);
                 startActivity(intent);
             }
         });
