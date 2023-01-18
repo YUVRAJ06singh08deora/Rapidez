@@ -25,8 +25,8 @@ public class Driverss_performanceActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         speed = findViewById(R.id.speed);
         accln=findViewById(R.id.accln_tx);
-        speedref=firebaseDatabase.getReference("A");
-        acclnref=firebaseDatabase.getReference("V");
+        speedref=firebaseDatabase.getReference("V");
+        acclnref=firebaseDatabase.getReference("A");
         getdata();
     }
     private void getdata() {
@@ -47,6 +47,7 @@ public class Driverss_performanceActivity extends AppCompatActivity {
                 // after getting the value we are setting
                 // our value to our text view in below line.
                 speed.setText(value1);
+
             }
 
             @Override

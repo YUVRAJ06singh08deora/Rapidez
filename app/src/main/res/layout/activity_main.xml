@@ -41,9 +41,17 @@
                     android:paddingRight="50dp"/>
 
                 <TextView
+                    android:id="@+id/speed_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="125km/hr"
+                    android:text="0"
+                    android:textColor="#049ad1"
+                    android:textSize="25dp" />
+                <TextView
+                    android:id="@+id/kmph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="km/hr"
                     android:textColor="#049ad1"
                     android:textSize="25dp" />
             </LinearLayout>
@@ -119,7 +127,7 @@
                 android:layout_width="150dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:src="@drawable/per"/>
+                android:src="@drawable/performance"/>
 
         </LinearLayout>
         <LinearLayout
@@ -145,8 +153,16 @@
                     android:paddingLeft="20dp"
                     android:text="History"
                     android:textColor="@color/white"
+                    android:layout_gravity="center"
                     android:textSize="25dp"
                     android:paddingRight="90dp"/>
+
+                <ImageView
+                    android:id="@+id/image_history"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/history"/>
 
             </LinearLayout>
 
