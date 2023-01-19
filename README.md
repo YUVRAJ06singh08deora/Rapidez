@@ -14,6 +14,10 @@
 
 <img width="248" alt="image" src="https://user-images.githubusercontent.com/76677032/213474725-1a80c1a6-6199-4959-9971-46ecb6becfa1.png">
 
+Hardware components are the epicenter of our project. All the real-time data are collected on the hardware device and then transfered to the database.
+The Hardware component used in our projects are:-
+1. Node MCU with ESP-32 :- Connects to the internet and allows us to store data gathered in realtime.
+2. MPU-9250 :- This is a 9-axis motion tracking device that can provide data on the device's orientation, acceleration, and angular velocity.
 
 ### Introduction:
 Rapidez is an IoT (Internet of Things) based mobile application that alerts users of excessive speed limits while they are driving. The app uses GPS technology and sensor data from connected devices to determine the speed of the vehicle and alert the driver if they exceed the legal speed limit.
