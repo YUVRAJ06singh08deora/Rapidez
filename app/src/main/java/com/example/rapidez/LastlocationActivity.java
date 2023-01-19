@@ -67,7 +67,7 @@ public class LastlocationActivity extends FragmentActivity implements OnMapReady
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(lat, longi);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Vellore Institute of Technology"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 
