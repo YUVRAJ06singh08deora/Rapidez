@@ -1,7 +1,7 @@
 # Rapidez
 
 
-[Click on this Link to Open the Presentation](https://drive.google.com/file/d/1Sl19DC2BrUWdEyKwef59T7hpOCNrsB7t/view?usp=share_link)
+[Click on this Link to Open the Presentation](https://www.canva.com/design/DAFX_8-SAKY/gI24VFdh9nnTWSLuAzoLkQ/view?utm_content=DAFX_8-SAKY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ### Application Screenshots
 
@@ -10,7 +10,9 @@
 <img width="164" alt="image" src="https://user-images.githubusercontent.com/76677032/213192589-1bd2b339-3c36-497e-bd71-90bc865fd4ee.png">
 <img width="164" alt="image" src="https://user-images.githubusercontent.com/76677032/213192823-9aa8e694-3e44-4f89-97b1-3fd6fc7b1948.png">
 
+### Hardware Images
 
+<img width="248" alt="image" src="https://user-images.githubusercontent.com/76677032/213474725-1a80c1a6-6199-4959-9971-46ecb6becfa1.png">
 
 
 ### Introduction:
